@@ -4,141 +4,261 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio de Théo Bounaceur, ingénieur IA et robotique.">
-  <title>Théo Bounaceur — IA & Robotique</title>
+  <title>Théo Bounaceur — Ingénieur IA et robotique</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#accueil"><span class="brand-mark">TB</span><span>Théo Bounaceur</span></a>
-    <nav aria-label="Navigation principale">
-      <a href="#accueil">Accueil</a><a href="#profil">Profil</a><a href="#projets">Projets</a><a href="#contact">Contact</a>
-    </nav>
+  <header class="cover" aria-label="Image de couverture">
+    <!-- Emplacement vide pour la future image de couverture -->
   </header>
 
   <main>
-    <section class="hero" id="accueil">
-      <div class="hero-shade"></div>
-      <div class="hero-content">
-        <p class="eyebrow">PORTFOLIO · IA & ROBOTIQUE</p>
-        <h1>Théo Bounaceur</h1>
-        <p class="hero-role">Ingénieur IA & Robotique</p>
-        <p class="hero-description">De la simulation au robot réel, je mets l'intelligence artificielle au service de systèmes concrets.</p>
-        <div class="hero-actions">
-          <a class="button button-light" href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a class="button button-light" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-          <a class="button button-primary" href="assets/cv-theo-bounaceur.pdf">Télécharger mon CV ↓</a>
-        </div>
-      </div>
-      <a class="scroll-cue" href="#profil" aria-label="Défiler vers le profil">⌄</a>
+    <section class="intro">
+      <h1>Théo Bounaceur</h1>
+      <p class="job-title">Ingénieur IA et robotique</p>
+      <nav class="contact-links" aria-label="Liens et contact">
+        <a href="assets/CV%202026.docx%20-%20Google%C2%A0Docs.pdf" target="_blank" rel="noreferrer">CV</a>
+        <a href="https://www.linkedin.com/in/theo-bounaceur-83aa72292/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:theo.bounaceur@gmail.com">theo.bounaceur@gmail.com</a>
+        <button class="contact-copy" type="button" data-copy="+33685231219" aria-label="Copier le numéro de téléphone">06 85 23 12 19</button>
+      </nav>
     </section>
 
-    <section class="profile section" id="profil">
-      <div class="portrait" aria-label="Emplacement pour votre photo de profil">
-        <span>TB</span><small>Ajouter votre photo</small>
+    <section class="content-section skills-section" id="competences">
+      <h2>Compétences</h2>
+      <div class="skills-list">
+        <p><strong>Développement et outils :</strong> Python, C, C++, Java, Git, Docker, Linux, Unreal Engine, SolidWorks, FreeCAD</p>
+        <p><strong>IA :</strong> Reinforcement Learning (PPO/SAC/DQN), Deep Learning, Machine Learning, vision par ordinateur, IA embarquée, PyTorch, TensorFlow, Stable-Baselines</p>
+        <p><strong>Robotique :</strong> ROS 2, ROS Control, Unitree SDK, MuJoCo, Isaac Lab/Isaac Sim, Gazebo, CycloneDDS, MATLAB, Arduino, composants électroniques et PCB</p>
       </div>
-      <div class="profile-main">
-        <p class="eyebrow blue">À PROPOS</p>
-        <h2>Profil</h2>
-        <p class="intro">Ingénieur en intelligence artificielle et robotique, je m'intéresse à l'apprentissage automatique, à la robotique et au déploiement de méthodes d'IA sur des systèmes physiques.</p>
-        <p class="editable-note">Remplace ce texte par une présentation personnelle de 3 à 4 lignes : spécialités, expérience au LORIA et type de poste recherché.</p>
-        <h3>Compétences clés</h3>
-        <div class="tags">
-          <span>Python</span><span>C / C++</span><span>PyTorch</span><span>Reinforcement Learning</span>
-          <span>ROS 2</span><span>Isaac Lab / Isaac Sim</span><span>MuJoCo</span><span>Linux</span><span>Docker</span><span>Git</span>
-        </div>
-      </div>
-      <aside class="education">
-        <p class="eyebrow blue">FORMATION</p>
-        <h2>Parcours académique</h2>
-        <div class="timeline">
-          <article><strong>Diplôme / formation</strong><span>Établissement · Années</span><small>Spécialité ou mention</small></article>
-          <article><strong>Formation précédente</strong><span>Établissement · Années</span><small>Spécialité ou mention</small></article>
-          <article><strong>Autre diplôme</strong><span>Établissement · Années</span><small>Spécialité ou mention</small></article>
-        </div>
-        <p class="editable-note">À compléter avec tes intitulés et dates exacts.</p>
-      </aside>
     </section>
 
-    <section class="projects section" id="projets">
-      <div class="section-heading">
-        <div><p class="eyebrow blue">SÉLECTION</p><h2>Mes projets</h2><p>Quelques réalisations en IA, robotique et systèmes embarqués.</p></div>
-        <span class="project-count">04 projets</span>
+    <section class="content-section" id="projets">
+      <h2>Mes projets</h2>
+      <div class="project-category">
+        <h3>Robotique</h3>
+        <div class="project-list">
+          <details class="project" open>
+                    <summary>
+            <span class="project-gallery photo"><img src="assets/escalier.jpg" alt="Le robot Go2 monte un escalier"></span>
+                      <span class="project-copy">
+                        <span class="project-title">Faire gravir des escaliers au robot Go2</span>
+                        <span class="project-keywords">Python · C++ · Isaac Sim · MuJoCo · reinforcement learning · Unitree Go2</span>
+                        <span class="project-description">J’ai entraîné le Go2 dans Isaac Lab à gravir des escaliers, uniquement grâce à sa proprioception. J’ai aussi développé un programme Python pour déployer le modèle au LORIA. C’était ma première mission au CNRS.</span>
+                      </span>
+                    </summary>
+                  </details>
+          <details class="project">
+                    <summary>
+            <span class="project-gallery photo"><img src="assets/g1.gif" alt="Le robot G1 danse"></span>
+                      <span class="project-copy">
+                        <span class="project-title">Faire danser le robot humanoïde G1</span>
+                        <span class="project-keywords">Python · C++ · Isaac Sim · MuJoCo · reinforcement learning · motion capture · Unitree G1 · TWIST (Stanford)</span>
+                        <span class="project-description">En m’appuyant sur le projet TWIST de Stanford, j’ai entraîné le G1 à suivre les mouvements d’un opérateur : marcher, danser ou s’accroupir sur commande. J’ai aussi créé une interface pour utiliser les modèles ensemble.</span>
+                      </span>
+                    </summary>
+                  </details>
+          <details class="project">
+                    <summary>
+                      <span class="project-gallery photo"><img src="assets/anymal.jpg" alt="ANYmal D pendant une opération de maintenance"></span>
+                      <span class="project-copy">
+                        <span class="project-title">Prendre en main le robot ANYmal D et partager les connaissances</span>
+                        <span class="project-keywords">ANYmal D · ROS 1 · Gazebo · C++ · contrôleur robotique</span>
+                        <span class="project-description">J’ai pris en main l’ANYmal D et ses outils propriétaires (ROS 1, Gazebo) en vue de son déploiement pour la surveillance du site de stockage de déchets nucléaires de Bure. J’ai développé un petit contrôleur personnalisé basé sur le code du constructeur et rédigé une documentation. Les essais ont été interrompus par une batterie hors service.</span>
+                      </span>
+                    </summary>
+                  </details>
+          <details class="project">
+                    <summary>
+                      <span class="project-gallery photo"><img src="assets/robotmobile.png" alt="Robot mobile suiveur de ligne"></span>
+                      <span class="project-copy">
+                        <span class="project-title">Construire un robot mobile suiveur de ligne</span>
+                        <span class="project-keywords">Composants électroniques · schéma électrique · Arduino · construction de robot · communication radio</span>
+                        <span class="project-description">Le robot était construit à partir de composants électroniques de base (transistors, diodes, bobines, condensateurs, moteurs, etc.) et d’un Arduino.</span>
+                      </span>
+                    </summary>
+                  </details>
+        </div>
       </div>
-
-      <div class="accordion">
-        <details class="project" open>
-          <summary>
-            <img src="assets/go2-project.jpg" alt="Robot quadrupède — image illustrative">
-            <span class="project-summary">
-              <strong>Locomotion robotique par apprentissage par renforcement</strong>
-              <span class="tags"><i>Python</i><i>PyTorch</i><i>Isaac Lab</i><i>Sim-to-Real</i></span>
-              <span class="summary-description">Entraînement de politiques de locomotion en simulation et déploiement sur Unitree Go2.</span>
-            </span><span class="chevron">⌄</span>
-          </summary>
-          <div class="project-detail">
-            <p><b>Objectif.</b> Développer et entraîner une politique de locomotion, puis préparer son exécution sur robot réel.</p>
-            <p><b>Travail réalisé.</b> À compléter : environnement d'entraînement, observations, récompenses, algorithme, résultats et conditions de déploiement.</p>
-            <a class="text-link" href="https://github.com/" target="_blank" rel="noreferrer">Voir le dépôt GitHub ↗</a>
-          </div>
-        </details>
-
-        <details class="project">
-          <summary>
-            <img src="assets/g1-project.jpg" alt="Robot humanoïde — image illustrative">
-            <span class="project-summary">
-              <strong>Déploiement de politiques sur robot humanoïde</strong>
-              <span class="tags"><i>Robot Learning</i><i>Simulation</i><i>ROS 2</i></span>
-              <span class="summary-description">Expérimentation et déploiement de comportements robotiques sur Unitree G1.</span>
-            </span><span class="chevron">⌄</span>
-          </summary>
-          <div class="project-detail">
-            <p><b>Objectif.</b> Faire le lien entre les politiques apprises en simulation et leur exécution sur un robot humanoïde.</p>
-            <p><b>Travail réalisé.</b> À compléter avec le contexte, les outils, les méthodes et les résultats obtenus.</p>
-            <a class="text-link" href="https://github.com/" target="_blank" rel="noreferrer">Voir le dépôt GitHub ↗</a>
-          </div>
-        </details>
-
-        <details class="project">
-          <summary>
-            <img src="assets/estop-project.jpg" alt="Électronique embarquée — image illustrative">
-            <span class="project-summary">
-              <strong>Système d'arrêt d'urgence sans fil</strong>
-              <span class="tags"><i>Arduino</i><i>RF24</i><i>Électronique</i></span>
-              <span class="summary-description">Conception d'un dispositif de sécurité sans fil pour systèmes robotiques.</span>
-            </span><span class="chevron">⌄</span>
-          </summary>
-          <div class="project-detail">
-            <p><b>Objectif.</b> Concevoir un arrêt d'urgence sans fil avec émetteur, récepteur et relais de sécurité.</p>
-            <p><b>Travail réalisé.</b> À compléter : architecture, communication radio, gestion de l'état de sécurité, tests et validation.</p>
-            <a class="text-link" href="https://github.com/" target="_blank" rel="noreferrer">Voir le dépôt GitHub ↗</a>
-          </div>
-        </details>
-
-        <details class="project">
-          <summary>
-            <img src="assets/simulation-project.jpg" alt="Simulation robotique — image illustrative">
-            <span class="project-summary">
-              <strong>Simulation et apprentissage pour la robotique</strong>
-              <span class="tags"><i>NVIDIA Isaac Sim</i><i>Reinforcement Learning</i><i>Domain Randomization</i></span>
-              <span class="summary-description">Entraînement et évaluation de politiques robotiques en environnement simulé.</span>
-            </span><span class="chevron">⌄</span>
-          </summary>
-          <div class="project-detail">
-            <p><b>Objectif.</b> Utiliser la simulation pour entraîner, tester et améliorer des comportements robotiques.</p>
-            <p><b>Travail réalisé.</b> À compléter avec les environnements, les modèles, les métriques et les résultats.</p>
-            <a class="text-link" href="https://github.com/" target="_blank" rel="noreferrer">Voir le dépôt GitHub ↗</a>
-          </div>
-        </details>
+      <div class="project-category">
+        <h3>IA</h3>
+        <div class="project-list">
+          <details class="project">
+                    <summary>
+                      <span class="project-gallery"><img src="assets/metaheuristique.png" alt="Visualisation du projet de métaheuristiques"></span>
+                      <span class="project-copy">
+                        <span class="project-title">Rechercher des solutions optimales par métaheuristiques</span>
+                        <span class="project-keywords">Imperialist Competitive Algorithm · métaheuristiques · C++ · Python</span>
+                        <span class="project-description">J’ai appliqué l’Imperialist Competitive Algorithm pour simuler et rechercher un prix de vente adapté à une entreprise connaissant mal son marché. Cette métaheuristique s’inspire de la compétition et des alliances entre pays.</span>
+                      </span>
+                    </summary>
+                  </details>
+          <details class="project">
+                    <summary>
+                      <span class="project-gallery chart"><img src="assets/memsic-enhanced.png" alt="Graphique de classification de données industrielles"></span>
+                      <span class="project-copy">
+                        <span class="project-title">Classer des données pour l’industrie chimique</span>
+                        <span class="project-keywords">Machine learning · visualisation de données · clustering · ACP</span>
+                        <span class="project-description">Application de modèles de machine learning et visualisation de données, notamment par clustering et analyse en composantes principales (ACP).</span>
+                      </span>
+                    </summary>
+                  </details>
+          <details class="project">
+                    <summary>
+                      <span class="project-gallery multi"><img src="assets/skeletontrack.png" alt="Résultat du suivi de squelette"><img src="assets/skeletontrack2.png" alt="Visualisation du suivi de squelette"></span>
+                      <span class="project-copy">
+                        <span class="project-title">Analyser la performance sportive par reconnaissance de squelette</span>
+                        <span class="project-keywords">Vision par ordinateur · deep learning · suivi de squelette · analyse sportive</span>
+                        <span class="project-description">À partir de caméras 3D et classiques, le projet suivait des joueurs de football de 10 à 18 ans avec MediaPipe, TensorFlow, PoseNet, OpenCV et Cubemos. Il mesurait leurs déplacements, leurs courses et leur vitesse pendant les matchs.</span>
+                      </span>
+                    </summary>
+                  </details>
+        </div>
       </div>
-      <p class="editable-note global-note">Les intitulés, descriptions, images et liens GitHub de cette première version sont modifiables. Supprime les projets qui ne correspondent pas à des réalisations que tu souhaites présenter.</p>
+      <div class="project-category">
+        <h3>Social</h3>
+        <div class="project-list">
+          <details class="project">
+                    <summary class="summer-summary">
+                      <span class="project-gallery multi summer-gallery"><img src="assets/summerschool.gif" alt="Animation du projet Summer School"><img src="assets/summerschool2.png" alt="Capture du projet Summer School"></span>
+                      <span class="project-copy">
+                        <span class="project-title">Former au déploiement de modèles sur Go2 — Summer School</span>
+                        <span class="project-keywords">Reinforcement learning · formation · MuJoCo · MJLab · Python · Docker · Git</span>
+                        <span class="project-description">J’ai organisé en anglais un atelier de deux heures sur le déploiement d’un modèle de contrôle sur Go2, pour des étudiants et doctorants. Le TP associait supports vidéo et papier, code à compléter dans Docker et interface MuJoCo.</span>
+                      </span>
+                    </summary>
+                  </details>
+          <details class="project">
+                    <summary>
+                      <span class="project-gallery multi"><img src="assets/arreturgence.png" alt="Schéma du système d’arrêt d’urgence"><img src="assets/arreturgence2.jpg" alt="Réalisation du système d’arrêt d’urgence"></span>
+                      <span class="project-copy">
+                        <span class="project-title">Organiser un TP sur les arrêts d’urgence des robots Unitree</span>
+                        <span class="project-keywords">Arduino · relais · impression 3D · sécurité robotique · robots Unitree</span>
+                        <span class="project-description">Chaque participant disposait d’un kit d’arrêt d’urgence que j’ai entièrement assemblé : boîtier imprimé en 3D, carte Arduino préprogrammée, relais et composants associés. Le kit permettait d’ajouter un arrêt d’urgence aux robots Unitree, qui n’en sont pas équipés d’origine par le constructeur.</span>
+                      </span>
+                    </summary>
+                  </details>
+          <details class="project">
+                    <summary>
+                      <span class="project-gallery rl-gallery"><img src="assets/expliquerrl2.png" alt="Fiche technique sur le reinforcement learning"></span>
+                      <span class="project-copy">
+                        <span class="project-title">Expliquer le reinforcement learning appliqué aux robots Unitree</span>
+                        <span class="project-keywords">Reinforcement learning · PPO · SAC · MDP · LaTeX</span>
+                        <span class="project-description">J’ai rédigé en LaTeX des fiches illustrées sur les MDP, PPO, SAC et le déploiement de modèles sur les robots Unitree.</span>
+                      </span>
+                    </summary>
+                  </details>
+        </div>
+      </div>
+      <div class="project-category">
+        <h3>Jeux vidéo</h3>
+        <div class="project-list">
+          <details class="project">
+                    <summary>
+                      <span class="project-gallery"><span class="photo-placeholder">Photo à ajouter</span></span>
+                      <span class="project-copy">
+                        <span class="project-title">Créer deux jeux vidéo avec Unreal Engine 5</span>
+                        <span class="project-keywords">Unreal Engine 5 · jeu de plateforme 2D · jeu à la première personne</span>
+                        <span class="project-description">J’ai créé deux jeux sous Unreal Engine 5 : un jeu de plateforme 2D en sprites, inspiré de Mario, et un jeu d’évasion de prison à la première personne contre des zombies.</span>
+                      </span>
+                    </summary>
+                  </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="parcours">
+      <h2>Parcours académique</h2>
+      <div class="education-list">
+        <article class="education-entry">
+          <div class="education-logo"><img src="assets/uqac.jpeg" alt="Logo de l’UQAC"></div>
+          <div class="education-copy">
+            <div class="education-heading">
+              <h3><a href="https://www.uqac.ca/" target="_blank" rel="noreferrer">UQAC</a>, Université du Québec à Chicoutimi</h3>
+              <span class="education-location">Chicoutimi (Canada)</span>
+            </div>
+            <div class="education-details">
+              <p>Maîtrise en informatique : IA et jeux vidéo</p>
+              <span>1 an (2023–2024)</span>
+            </div>
+          </div>
+        </article>
+        <article class="education-entry">
+          <div class="education-logo"><img src="assets/bristol.jpg" alt="Logo de l’Université de Bristol"></div>
+          <div class="education-copy">
+            <div class="education-heading">
+              <h3><a href="https://www.bristol.ac.uk/" target="_blank" rel="noreferrer">Université de Bristol</a></h3>
+              <span class="education-location">Bristol (Angleterre)</span>
+            </div>
+            <div class="education-details">
+              <p>Transfert de crédits pour un semestre : Electrical and Electronic Engineering</p>
+              <span>6 mois (2023)</span>
+            </div>
+          </div>
+        </article>
+        <article class="education-entry">
+          <div class="education-logo"><img src="assets/imt.png" alt="Logo d’IMT Atlantique"></div>
+          <div class="education-copy">
+            <div class="education-heading">
+              <h3><a href="https://www.imt-atlantique.fr/fr" target="_blank" rel="noreferrer">IMT Atlantique</a>, École d’ingénieur généraliste (<a href="https://www.letudiant.fr/classements/classement-des-ecoles-d-ingenieurs.html" target="_blank" rel="noreferrer">3ᵉ au classement L’Étudiant</a>)</h3>
+              <span class="education-location">Nantes</span>
+            </div>
+            <div class="education-details">
+              <p>Spécialité : Robotique et Interactions</p>
+              <span>3 ans (2021–2025)</span>
+            </div>
+          </div>
+        </article>
+        <article class="education-entry">
+          <div class="education-logo" aria-hidden="true"></div>
+          <div class="education-copy">
+            <div class="education-heading">
+              <h3>Classes Préparatoires aux Grandes Écoles – Lycée Henri Loritz</h3>
+              <span class="education-location">Nancy</span>
+            </div>
+            <div class="education-details">
+              <p>Classes préparatoires aux grandes écoles</p>
+              <span>3 ans (2018–2021)</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="extra">
+      <h2>Extra</h2>
+      <div class="extra-list">
+        <p><strong>Anglais (C1)</strong> : TOEIC <strong>980</strong> et IELTS <strong>7.5</strong></p>
+        <p><strong>Espagnol (B1)</strong></p>
+        <p><strong>Permis B</strong></p>
+        <div class="football-entry">
+          <p>Je suis joueur de football et j’aime aussi transmettre ma passion, notamment aux jeunes, en tant qu’entraîneur. J’ai notamment entraîné au club Venturi de Saguenay, au Canada.</p>
+          <div class="football-gallery">
+            <img class="football-logo" src="assets/venturi1.jpg" alt="Logo de Venturi de Saguenay">
+            <img src="assets/venturi.jpg" alt="Terrain de football intérieur au Canada">
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-
-  <footer id="contact">
-    <div><strong>Théo Bounaceur</strong><span>Ingénieur IA & Robotique</span></div>
-    <div class="footer-links"><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:ton.email@example.com">Email</a></div>
-    <span class="footer-motto">De la simulation au robot réel.</span>
-  </footer>
-  <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('[data-copy]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const number = button.dataset.copy;
+        try {
+          await navigator.clipboard.writeText(number);
+        } catch {
+          const temporaryInput = document.createElement('textarea');
+          temporaryInput.value = number;
+          temporaryInput.style.position = 'fixed';
+          temporaryInput.style.opacity = '0';
+          document.body.appendChild(temporaryInput);
+          temporaryInput.select();
+          document.execCommand('copy');
+          temporaryInput.remove();
+        }
+      });
+    });
+  </script>
 </body>
 </html>

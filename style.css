@@ -297,6 +297,17 @@ h2 {
   min-width: 0;
 }
 
+.experience-entry a {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+.experience-entry a:hover { background: none; color: #244f86; }
+
 .education-entry {
   display: grid;
   grid-template-columns: 120px minmax(0, 1fr);

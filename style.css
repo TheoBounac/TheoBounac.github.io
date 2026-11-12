@@ -70,6 +70,26 @@ a {
 
 a:hover { background: #dceaff; color: #173b6c; }
 
+.project-title a,
+.project-description a,
+.experience-entry a,
+.education-entry a {
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #eaf2ff;
+  color: #244f86;
+  font-size: inherit;
+  font-weight: 400;
+  text-decoration: none;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.project-title a:hover,
+.project-description a:hover,
+.experience-entry a:hover,
+.education-entry a:hover { background: #dceaff; color: #173b6c; }
+
 .contact-copy {
   display: inline-block;
   padding: 8px 14px;
@@ -101,7 +121,7 @@ h2 {
   width: fit-content;
   margin: 0 auto 16px;
   padding: 7px 26px;
-  border-radius: 999px;
+  border-radius: 0;
   background: #c5c9cf;
   color: #30343a;
   font-family: Georgia, "Times New Roman", serif;
@@ -202,31 +222,9 @@ h2 {
 
 .project-title { font-size: 18px; font-weight: 700; }
 
-.project-title a {
-  padding: 0;
-  border-radius: 0;
-  background: none;
-  color: inherit;
-  font-size: inherit;
-  text-decoration: underline;
-}
-
-.project-title a:hover { background: none; color: #244f86; }
-
 .project-keywords { color: var(--muted); font-size: 13px; }
 
 .project-description { margin-top: 4px; font-size: 14px; }
-
-.project-description a {
-  padding: 0;
-  border-radius: 0;
-  background: none;
-  color: inherit;
-  font-size: inherit;
-  text-decoration: underline;
-}
-
-.project-description a:hover { background: none; color: #244f86; }
 
 .simple-list ul { margin: 0; padding-left: 22px; }
 
@@ -297,17 +295,6 @@ h2 {
   min-width: 0;
 }
 
-.experience-entry a {
-  padding: 0;
-  border-radius: 0;
-  background: none;
-  color: inherit;
-  font-size: inherit;
-  text-decoration: underline;
-}
-
-.experience-entry a:hover { background: none; color: #244f86; }
-
 .education-entry {
   display: grid;
   grid-template-columns: 120px minmax(0, 1fr);
@@ -349,17 +336,6 @@ h2 {
 .education-details { margin-top: 6px; }
 
 .education-details p { margin: 0; }
-
-.education-entry a {
-  padding: 0;
-  border-radius: 0;
-  background: none;
-  color: inherit;
-  font-size: inherit;
-  text-decoration: underline;
-}
-
-.education-entry a:hover { background: none; color: #244f86; }
 
 .extra-list { display: grid; gap: 8px; }
 

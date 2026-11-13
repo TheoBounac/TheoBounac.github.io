@@ -230,6 +230,19 @@ h2 {
 
 .project-description { margin-top: 4px; font-size: 14px; }
 
+.project-links { margin-top: 4px; }
+
+.project-links a {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eaf2ff;
+  color: #244f86;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.project-links a:hover { background: #dceaff; color: #173b6c; }
+
 .simple-list ul { margin: 0; padding-left: 22px; }
 
 .simple-list li { padding: 3px 0; }
